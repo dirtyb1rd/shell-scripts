@@ -19,6 +19,9 @@ do
 	read cmd
 	echo "alias "$name"='"$cmd"'" >> ~/.bashrc
 	echo "alias "$name"='"$cmd"'" >> ~/.zshrc
+        #source(update) new bashrc&zshrc
+        source ~/.bashrc
+        source ~/.zshrc
 #Prompt for repeat
         echo -n "Do you have another custom command you wish to create? (Y/N)"
         read -n1 Input
@@ -29,7 +32,3 @@ do
                 ;;
         esac
 done
-
-#source new bashrc&zshrc
-source ~/.bashrc
-source ~/.zshrc
