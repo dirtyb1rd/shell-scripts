@@ -32,4 +32,4 @@ done
 
 #source new bashrc&zshrc
 source ~/.bashrc
-source ~/zshrc
+source ~/.zshrc
