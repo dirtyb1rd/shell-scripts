@@ -4,8 +4,6 @@
 
 #Create custom commands in both bash and zsh at the same time
 
-#!/bin/bash
-
 _repeat="Y"
 
 while [ $_repeat = "Y" ]
@@ -19,9 +17,6 @@ do
 	read cmd
 	echo "alias "$name"='"$cmd"'" >> ~/.bashrc
 	echo "alias "$name"='"$cmd"'" >> ~/.zshrc
-        #source(update) new bashrc&zshrc
-        source ~/.bashrc
-        source ~/.zshrc
 #Prompt for repeat
         echo -n "Do you have another custom command you wish to create? (Y/N)"
         read -n1 Input
