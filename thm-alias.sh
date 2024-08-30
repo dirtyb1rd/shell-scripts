@@ -11,7 +11,7 @@ if [[ $vpn =~ ^[Yy]$ ]];
 then
 
 #Get name in order to find file
-echo 'Hello, please provide THM username, this will be user to find your THM vpn profile in your downloads folder at ~/Downloads/^USERNAME^.ovpn'
+echo 'Hello, please provide THM username, this will be used to find your THM vpn profile in your downloads folder at ~/Downloads/^USERNAME^.ovpn'
 read thm
 
 #Make dir. and move vpn file into it
