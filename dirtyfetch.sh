@@ -107,7 +107,7 @@ if [ -f /proc/meminfo ]; then
     fi
     # Calculate in GiB with 1 decimal point
         MY_MEM=$(awk -v t="$mem_total" -v a="$mem_avail" 'BEGIN {
-            printf "%.1fGiB / %.1fGiB", (t-a)/1048576, t/1048576
+            printf "%.1f / %.1f GB", (t-a)/1048576, t/1048576
         }')    
 else
     MY_MEM="Unknown"
