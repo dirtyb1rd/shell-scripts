@@ -105,11 +105,10 @@ if [ -f /proc/meminfo ]; then
     if [ -z "$mem_avail" ]; then
         mem_avail=$(awk '/MemFree/ {print $2}' /proc/meminfo)
     fi
-    
-    # Convert KB to MB
-    mem_used=$(( (mem_total - mem_avail) / 1024 ))
-    mem_total_mb=$(( mem_total / 1024 ))
-    MY_MEM="${mem_used}MiB / ${mem_total_mb}MiB"
+    # Calculate in GiB with 1 decimal point
+        MY_MEM=$(awk -v t="$mem_total" -v a="$mem_avail" 'BEGIN {
+            printf "%.1fGiB / %.1fGiB", (t-a)/1048576, t/1048576
+        }')    
 else
     MY_MEM="Unknown"
 fi
