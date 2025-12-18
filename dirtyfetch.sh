@@ -13,13 +13,15 @@ SHOW_COLOR=false
 # Custom "Dirty Bird" ASCII Art
 # Note: We use an array for line-by-line printing
 read -r -d '' DIRTY_BIRD_ART <<'EOF'
-      ___
-   7 ( @@)
-  / \/. :\  
-  v  \:.\| 
-   \  33_/ 
-    |  |   
-    "--"   
+
+.______________
+/____#ascii____
+| ______art____
+| | |____is____
+| |/___cool____
+|  \___________
+|______________
+
 EOF
 
 # --- 2. ARGUMENT PARSING ---
