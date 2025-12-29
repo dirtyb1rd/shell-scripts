@@ -1,4 +1,4 @@
-#!/usr/bin/env dash
+#!/usr/bin/env sh
 
 MAX_BRIGHTNESS=$(/usr/bin/cat /sys/class/backlight/intel_backlight/max_brightness)
 ACTUAL_BRIGHTNESS=$(/usr/bin/cat /sys/class/backlight/intel_backlight/actual_brightness)
