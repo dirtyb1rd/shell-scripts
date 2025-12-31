@@ -1,3 +1,3 @@
 #!/usr/bin/env sh
 
-date '+%d'
+date '+%_I:%M'
