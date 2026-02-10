@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# Start the counter from 0
+SECONDS=0
+
+echo "Timer started. Press any key to stop."
+
+# Loop until a key is pressed
+until read -n 1 -t 1 -s; do
+    printf "\rElapsed time: %d seconds" "$SECONDS"
+done
+
+printf "\nTimer stopped after %d seconds.\n" "$SECONDS"
+
